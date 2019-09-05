@@ -118,6 +118,7 @@ module.exports = function(RED) {
                     outputMsg.payload = toFixed(scaledHold, 0); 
                     break;
             }
+            node.status({fill: "green",shape: "ring",text: sensorType + " analog output"});
             node.send(outputMsg);
         });
     }

@@ -119,6 +119,7 @@ module.exports = function(RED) {
                     outputMsg.payload = parseFloat(toFixed(scaledHold, prec));
                 break;
             }
+            node.status({fill: "green",shape: "ring",text: sensorType + " analog input"});
             node.send(outputMsg);
         });
     }

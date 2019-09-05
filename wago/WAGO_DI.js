@@ -17,7 +17,7 @@ module.exports = function(RED) {
                 p = p << 1; // divide by two and keep as an integer
                 }
                 o = m.reverse();
-            node.status({fill: "green",shape: "ring",text: bitSize});
+            node.status({fill: "green",shape: "ring",text: bitSize + " digital inputs"});
             node.send(o);
         });
     }
