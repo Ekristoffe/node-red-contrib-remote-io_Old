@@ -32,11 +32,16 @@
 </script>
 
 <script type="text/x-red" data-help-name="Digital Input">
-    <p>A node that parses modbus data to individual digital output pins.<br/>
-    
-    Select the desired size and offset of your module.  Pins are mapped from top to bottom as shown in image <br/>
+    <p>
+	A node that parses modbus data to individual digital pins.<br/>
+    Select the desired size and offset of your module.<br/>
+	Pins are mapped from top to bottom as shown in the following image :<br/>
     <br/>
-    <img id="img" src="DI_node_pins.jpg"/>
+	<img id="img" src="flowDI.png"/><br/>
+	<img id="img" src="icons/flowDI.png"/><br/>
+	<img id="img" src="./data/node_modules/node-red-contrib-remote-io/wago/icons/flowDI.png"/><br/>
+	<br/>
+	The node input must be a number, this can be a Modbus register (Fc03 / Fc04).<br/>
     The node will require proper offset if modbus register is being used for more than one digital module.<br/>
     </p>
 </script>   
