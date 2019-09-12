@@ -15,7 +15,7 @@
 		"automation",
 		"Power Measurement"
 	],
-	"node-red"     : {
+	"node-red": {
 		"nodes": {
 			"AnalogIn": "wago/WAGO_AI.js",
 			"AnalogOut": "wago/WAGO_AO.js",
