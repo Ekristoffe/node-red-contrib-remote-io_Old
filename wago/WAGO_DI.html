@@ -4,9 +4,9 @@
 		category: 'remote io',
 		color: '#EBEDEC',
 		defaults: {
-			outputs: {value: "8"},
-			wordOffset: {value: "0"},
-			bitOffset: {value: "0"},
+			outputs: {value: 8, required: true, validate: RED.validators.number()},
+			wordOffset: {value: 0, required: true, validate: RED.validators.number()},
+			bitOffset: {value: 0, required: true, validate: RED.validators.number()},
 			name: {value:""},
 			topic: {value:""}
 		},
@@ -15,22 +15,23 @@
 		icon: "iconDI.png",
 		label: function() {
 			return this.name||"Digital Input";
-		}
+		},
+		outputLabels: ["DI 0","DI 1","DI 2","DI 3","DI 4","DI 5","DI 6","DI 7","DI 8","DI 9","DI 10","DI 11","DI 12","DI 13","DI 14","DI 15"]
 	});
 </script>
 
 <script type="text/x-red" data-template-name="Digital Input">
 	<div class="form-row">
 		<label for="node-input-outputs"><i class="fa fa-random"></i> <span data-i18n="function.label.outputs" ></span>Number Of Channels</label>
-		<input id="node-input-outputs" style="width: 60px;" value="8">
+		<input type="text" id="node-input-outputs" style="width: 60px;" value="8">
 	</div>
 	<div class="form-row">
 		<label for="node-input-wordOffset"><i class="fa fa-random"></i> <span data-i18n="function.label.wordOffset" ></span>Word Offset</label>
-		<input id="node-input-wordOffset" style="width: 60px;" value="0">
+		<input type="text" id="node-input-wordOffset" style="width: 60px;" value="0">
 	</div>
 	<div class="form-row">
 		<label for="node-input-bitOffset"><i class="fa fa-random"></i> <span data-i18n="function.label.bitOffset" ></span>Bit Offset</label>
-		<input id="node-input-bitOffset" style="width: 60px;" value="0">
+		<input type="text" id="node-input-bitOffset" style="width: 60px;" value="0">
 	</div>
 	<div class="form-row">
 		<label for="node-input-name"><i class="icon-tag"></i> Name</label>
