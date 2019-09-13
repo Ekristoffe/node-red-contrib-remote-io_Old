@@ -1,7 +1,9 @@
 # node-red-contrib-remote-io
+[Node-RED](http://nodered.org/) nodes to easily use WAGO 750 Modules. 
 
 # Description:
-	[Node-RED](http://nodered.org/) nodes to easily use WAGO 750 Modules. 
+	Remote IO nodes make it simple to receive and send data in/out of Modbus registers.
+	Scaling functions and diagnostics are built in when available.
 
 	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT 
 	NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. 
@@ -38,8 +40,7 @@
 
 	https://github.com/Ekristoffe/node-red-contrib-remote-io/blob/master/wago/icons/old/flow_example2.png
 
-	Remote IO nodes make it simple to receive and send data in/out of Modbus registers.  Scaling functions and diagnostics are built in where available.
-
+	
 # Release Note
 	Version: 1.1.0.4 (01.08.2019)
 	- Global cleanup and use the C# Coding Standards and Naming Conventions
