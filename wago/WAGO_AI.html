@@ -205,10 +205,15 @@
 </script>
  
 <script type="text/x-red" data-help-name="Analog Input">
-	<p>A node that parses modbus data for the analog input modules on the WAGO 750 IO system<br/>
-	You can select the right "Module Number", or you can use the manual settings<br/>
-	Select the desired module and output type, scaling, etc...<br/>
+	<p>
+	A node that parses data from the analog input modules of the WAGO 750 IO system to usable scaled data.<br/>
+	First select the desired offset of your analog input.<br/>
+	Then select the right "Module Number", or you can use the manual settings<br/>
+	Select the desired output type, scaling, etc...<br/>
+	The node will automatically detect the input type:<br/>
+	&nbsp;- Array of Number, this can be from a Modbus read holding/input register request (Fc03 / Fc04).<br/>
+	&nbsp;- Number.<br/>
 	<br/>
-	The node is for a single channel only so rerequires only 1 WORD ( INT ) of input data.  Output is a string value.  Status bits are output on node status only.<br/>
+	The node will require proper offset if modbus register is being used for more than one digital module.<br/>
 	</p>
 </script>
