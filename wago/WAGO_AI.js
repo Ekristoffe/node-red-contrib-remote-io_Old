@@ -338,43 +338,7 @@ module.exports = function(RED) {
 				rawMask = rawMask << startbit;
 				break;
 		}
-			
-//*	750-452,			2-channel,	0 - 20 mA,		12bit,	0x0000(0) - 0x7FF8(32760) (3first bit out) bit 0 = overflow
-//*	750-453,			4-channel,	0 - 20 mA,		12bit,	0x0000(0) - 0x7FF8(32760) (3first bit out) Bit 0, 1 = overflow
-//*	750-454,			2-channel,	4 - 20 mA,		12bit,	0x0000(0) - 0x7FF8(32760) (3first bit out) bit 0 = overflow, bit 1 = short circuit
-//*	750-455,			4-channel,	4 - 20 mA,		12bit,	0x0000(0) - 0x7FF8(32760) (3first bit out) bit 0, 1 = overflow
-
-//*	750-456,			2-channel,	± 10 V DC,		13bit,	0x8000(−32768) - 0x7FF8(32760) (3first bit out) bit 0 = overflow
-//*	750-457,			4-channel,	± 10 V DC,		13bit,	0x8000(−32768) - 0x7FF8(32760) (3first bit out) bit 0 = overflow
-//*	750-459,			4-channel,	0 - 10 V DC,	12bit,	0x0000(0) - 0x7FF8(32760) (3first bit out) Bit 0, 1 = overflow
-
-//*	750-465,			2-channel,	0 - 20 mA,		12bit,	0x0000(0) - 0x7FF8(32760) (3first bit out) bit 0 = overflow
-//*	750-466,			2-channel,	4 - 20 mA,		12bit,	0x0000(0) - 0x7FF8(32760) (3first bit out) bit 0 = overflow, bit 1 = short circuit
-//*	750-467,			2-channel,	0 - 10 V DC,	12bit,	0x0000(0) - 0x7FF8(32760) (3first bit out) bit 0 = overflow
-//*	750-468,			4-channel,	0 - 10 V DC,	12bit,	0x0000(0) - 0x7FF8(32760) (3first bit out) bit 0 = overflow
-
-//*	750-470,			2-channel,	0 - 20 mA,		12bit,	0x0000(0) - 0x5000(20480) (3first bit out) bit 0 = overflow, bit 2 = short circuit
-//*	750-471,			4-Channel,	0/4 - 20 mA ; -10/0 - 10 V DC	
-//*	750-472,			2-channel,	0 - 20 mA,		15bit,	0x0000(0) - 0x7FFF(32767)
-//*	750-473,			2-channel,	4 - 20 mA,		12bit,	0x0000(0) - 0x7FF8(32760) (3first bit out) bit 0 = overflow, bit 1 = short circuit
-//*	750-474,			2-channel,	4 - 20 mA,		15bit,	0x0000(0) - 0x7FFF(32767)
-//*	750-475,			2-channel,	0 - 1 A,		15bit,	0x0000(0) - 0x2710(10000)
-//*	750-475/020-000,	2-channel,	0 - 5 A,		15bit,	0x0000(0) - 0x6AA9(27306)
-//*	750-476,			2-channel,	± 10 V DC,		16bit,	0x8000(-32768) - 0x7FFF(32767)
-//*	750-477,			2-channel,	0 - 10 V AC/DC,	15bit,	0x0000(0) - 0x2710(10000)
-//*	750-478,			2-channel,	0 - 10 V DC,	15bit,	0x0000(0) - 0x7FFF(32767)
-//*	750-479,			2-channel,	± 10 V DC,		14bit,	0x8000(−32768) - 0x7FFC(32764) (2first bit out) bit 0 = overflow
-
-//*	750-480,			2-channel,	0 - 20 mA,		13bit,	0x0000(0) - 0x7FFC(32764) (2first bit out) Bit 0, 1 = overflow
-//*	750-482,			2-channel,	4 - 20 mA,		13bit,	0x0000(0) - 0x7FFC(32764) (2first bit out) Bit 0 = overflow, bit 1 = short circuit
-//*	750-483,			2-channel,	0 - 30 V DC,	14bit,	0x0000(0) - 0x7FFE(32766) (1first bit out)
-
-//*	750-492,			2-channel,	4 - 20 mA,		13bit,	0x0000(0) - 0x7FFC(32764) (2first bit out) Bit 0 = overflow, bit 1 = short circuit
-//*	750-496,			8-channel,	0/4 - 20 mA,	12bit,	0x0000(0) - 0x7FF8(32760) (3first bit out) Bit 0, 1 = overflow
-//*	750-497,			8-channel,	-10/0 - 10 V DC	13bit,	0xFFF8(−32760) - 0x7FF8(32760) / 0x8000(−32768) - 0x7FF8(32760)(3first bit out) bit 0 = overflow
-
-
-
+		
 		// scales number (the scaled number can be outside the range of point A and B)
 		function scale(_x, _xA, _xB, _yA, _yB) {
 			// find the slope m
@@ -383,7 +347,7 @@ module.exports = function(RED) {
 			var _p = _yA - (_m * _xA);
 			// calculate the y
 			var _y = (_m * _x) + _p;
-
+			
 			return(_y);
 		}
 		
@@ -452,7 +416,6 @@ module.exports = function(RED) {
 			}
 			return _num;
 		}
-		
 		
 		this.on('input', function(msg) {
 			var _object;
