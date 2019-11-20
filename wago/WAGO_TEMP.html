@@ -51,20 +51,22 @@
  
 <script type="text/x-red" data-help-name="Temperature Input">
 	<p>
-	A node that parses data from the temperature input modules of the WAGO 750 IO system to usable scaled data.<br/>
-	First select the desired offset of your temperature input.<br/>
-	Then select the desired sensor type, signal type, etc...<br/>
-	The node will automatically detect the input type:<br/>
-	&nbsp;- Array of Number, this can be from a Modbus read holding/input register request (Fc03 / Fc04).<br/>
-	&nbsp;- Number.<br/>
-	<br/>
-	The node will require proper offset if modbus register is being used for more than one digital module.<br/>
+		A node that parses data from the temperature input modules of the WAGO 750 IO system to usable scaled data.<
 	</p>
-	
+	<p>
+		First select the desired offset of your temperature input.<br/>
+		Then select the desired sensor type, signal type, etc...<br/>
+		The node will automatically detect the input type:<br/>
+		&nbsp;- Array of Number, this can be from a Modbus read holding/input register request (Fc03 / Fc04).<br/>
+		&nbsp;- Number.<br/>
+		<br/>
+		The node will require proper offset if modbus register is being used for more than one digital module.<br/>
+	</p>
+		
 	<p>A node that parses modbus data for the temperature input modules on the WAGO 750 IO system<br/>
-	
-	Select the desired module and output type, scaling, etc...<br/>
-	<br/>
-	The node is for a single channel only so rerequires only 1 WORD ( INT ) of input data.  Output is a string value.  Status bits are output on node status only.<br/>
+		
+		Select the desired module and output type, scaling, etc...<br/>
+		<br/>
+		The node is for a single channel only so rerequires only 1 WORD ( INT ) of input data.  Output is a string value.  Status bits are output on node status only.<br/>
 	</p>
 </script>
